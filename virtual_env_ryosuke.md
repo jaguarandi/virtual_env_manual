@@ -1,6 +1,6 @@
-# 環境構築手順書
+# 環境構築手順書 {ignore=true}
 
-## バージョン一覧
+## バージョン一覧 {ignore=true}
 ツール|バージョン
 -|-
 php|7.3
@@ -10,7 +10,32 @@ Laravel|6.0
 CentOS|7.9.2009
 <br>
 
-## 環境構築の流れ
+## 環境構築の流れ {ignore=true}
+
+### 目次 {ignore=true}
+  ##### vagrantディレクトリ作成〜ログイン
+  - [vagrant用ディレクトリの用意](#vagrant用ディレクトリの用意)
+  - [Vagrantfileの編集](#vagrantfileの編集)
+  - [Vagrant プラグインのインストール](#vagrant-プラグインのインストール)
+  - [VagrantでゲストOSの起動、ログイン](#vagrantでゲストosの起動-ログイン)
+  ##### ツールのインストール
+  - [パッケージをインストール](#パッケージをインストール)
+  - [PHPのインストール](#phpのインストール)
+  - [composerのインストール](#composerのインストール)
+  - [Laravelのプロジェクト作成](#laravelのプロジェクト作成)
+  - [Laravelの認証機能実装](#laravelの認証機能実装)
+  - [操作権限の付与](#操作権限の付与)
+  - [データベースのインストールとパスワード設定](#データベースのインストールとパスワード設定)
+  - [データベースの作成](#データベースの作成)
+  ##### システムの設定
+  - [ファイヤーウォールの設定](#ファイヤーウォールの設定)
+  - [SELinuxの設定](#selinuxの設定)
+  - [Nginxのインストール](#nginxのインストール)
+  - [Laravelを動かす](#laravelを動かす)
+  ##### まとめ
+- [環境構築の所感](#環境構築の所感)
+- [参考サイト](#参考サイト)
+
 
 ### vagrant用ディレクトリの用意
 自分の作業用ディレクトリ下に**vagrant_practice**という名前のディレクトリを作成<br>
@@ -162,7 +187,7 @@ mysql > set password = "新たなpassword";
 ### データベースの作成
 Laravelのアプリケーションで使用するデータベースを作成する。
 ```
-mysql > create database laravelApp;
+mysql > create database laravel_app;
 ```
 
 laravelAppディレクトリ下の.envファイルを編集する。
@@ -171,8 +196,8 @@ $ sudo vi /vagrant/laravelApp/.env
 
 ### .envファイル内
 #----------------------
-### DB_DATABASEをプロジェクト名に変更
-DB_DATABASE=laravalApp
+### DB_DATABASEを作成したデータベース名に変更
+DB_DATABASE=laravel_app
 
 ### DB_PASSWORDを登録したパスワードに変更
 DB_PASSWORD=登録したパスワード
