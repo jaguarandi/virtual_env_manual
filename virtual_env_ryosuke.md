@@ -1,6 +1,6 @@
-# 環境構築手順書 {ignore=true}
+# 環境構築手順書
 
-## バージョン一覧 {ignore=true}
+## バージョン一覧
 ツール|バージョン
 -|-
 php|7.3
@@ -10,9 +10,9 @@ Laravel|6.0
 CentOS|7.9.2009
 <br>
 
-## 環境構築の流れ {ignore=true}
+## 環境構築の流れ
 
-### 目次 {ignore=true}
+### 目次
   ##### vagrantディレクトリ作成〜ログイン
   - [vagrant用ディレクトリの用意](#vagrant用ディレクトリの用意)
   - [Vagrantfileの編集](#vagrantfileの編集)
